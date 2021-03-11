@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+<div class="divTable">
+  <div class="divTableRow" *ngFor="let tableRow of tableRows; let i = index">
+    <div class="divTableCell">{{ tableRow.name }}</div>
+    <div class="divTableCell">{{ tableRow.value }}</div>
+    <div class="divTableCell">{{ tableRow.previousValue }}</div>
+    <div class="divTableCell">{{ tableRow.delta }}</div>
+    <div class="divTableCell">{{ tableRow.rafLimit }}</div>
+    <div class="divTableCell">
+      <app-progress-bar [progress]='getLimit(i)'></app-progress-bar>
+      </div>
+    <div class="divTableCell">{{ tableRow.date }}</div>
+  </div>
+</div>
